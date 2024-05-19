@@ -30,11 +30,22 @@ body {
 #nav-links {
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
+}
+
+#nav-links a {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-decoration: none;
   padding: 10px 20px;
   gap: 10px;
   cursor: pointer;
 }
 
+#nav-links a:hover {
+  background-color: #333;
+}
 
 /*
 :root {
