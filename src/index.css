@@ -1,54 +1,49 @@
-body {
+* {
   margin: 0;
-  font-family: Verdana, sans-serif
+  padding: 0;
+  font-family: Verdana, sans-serif;
 }
 
-#dashboard-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
+/* ↓ Side Navbar Start ↓ */
 .side-navbar {
-  display: flex;
-  flex-direction: column;
   background-color: #242424;
-  color: #fff;
-  height: 100%;
+  height: 100vh;
   width: 250px;
 }
 
-#logo-and-name-container {
+#name-and-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 20px;
   gap: 5px;
+  color: white;
   border-bottom: 1px solid #333;
 }
 
-#nav-links {
+.side-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
 }
 
-#nav-links a, button {
+.side-navbar a, button {
   display: flex;
-  flex-direction: column;
-  color: white;
+  align-items: center;
+  padding: 10px;
   text-decoration: none;
-  padding: 10px 20px;
-  gap: 10px;
-  cursor: pointer;
+  color: white;
+
+  &:hover {
+    background-color: #333;
+  }
 }
 
-#nav-links button {
-  display: flex;
-  justify-content: space-between;
+button {
   width: 100%;
-  background-color: #242424;
-  font-family: Verdana, sans-serif;
+  background-color: transparent;
   font-size: 16px;
   border: none;
 }
@@ -59,11 +54,44 @@ body {
   width: 100%;
 }
 
-#dropdown-menu-contents a {
-  background-color: #121212;
-  padding-left: 35px;
+#workout-dropdown-menu a {
+  padding-left: 30px;
+}
+/* ↑ Side Navbar End ↑ */
+
+/* ↓ Nav Drawer Start ↓ */
+.nav-drawer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #242424;
+  height: 65px;
+  width: 100vw;
+  color: white;
 }
 
-#nav-links a:hover, #nav-links button:hover {
-  background-color: #333;
+.nav-drawer #name-and-logo {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 5px;
+  height: 100%;
 }
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+/* ↑ Nav Drawer End ↑ */
+
+/* ↓ Resize Logic Start ↓ */
+@media (max-width: 768px) {
+  .side-navbar {
+    display: none;
+  }
+
+  .nav-drawer {
+    display: flex;
+  }
+}
+/* ↑ Resize Logic End ↑ */
