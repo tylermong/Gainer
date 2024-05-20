@@ -1,10 +1,11 @@
 import '../index.css'; 
-import SideNavbar from "../components/Menu"
+import Menu from "../components/Menu"
 
 function Dashboard() {
     return (
         <>
-            <SideNavbar />
+            <Menu />
+            <h2>Dashboard Page</h2>
         </>
     );
 }

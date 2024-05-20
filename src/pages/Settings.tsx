@@ -1,10 +1,10 @@
 import '../index.css'; 
-import SideNavbar from "../components/Menu"
+import Menu from "../components/Menu"
 
 function Settings() {
     return (
         <>
-            <SideNavbar />
+            <Menu />
             <h2>Settings Page</h2>
         </>
     );

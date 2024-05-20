@@ -1,10 +1,10 @@
 import '../index.css'; 
-import SideNavbar from "../components/Menu"
+import Menu from "../components/Menu"
 
 function ViewWorkouts() {
     return (
         <>
-            <SideNavbar />
+            <Menu />
             <h2>ViewWorkouts Page</h2>
         </>
     );
